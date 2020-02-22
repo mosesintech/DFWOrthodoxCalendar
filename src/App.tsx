@@ -1,20 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import { getEvents } from './getEventss';
+import { useAsync } from 'react-use';
 
 function App() {
+  useAsync(async () => {
+    const events = await getEvents();
+    console.log(events);
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
+    <div className='App'>
+      <header className='App-header'>
+        <p> .   losdaskdoasdjosad
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
         <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+          className='App-link'
+          href='https://reactjs.org'
+          target='_blank'
+          rel='noopener noreferrer'
         >
           Learn React
         </a>
@@ -22,5 +26,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
