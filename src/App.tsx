@@ -1,17 +1,16 @@
 import React from 'react';
 
-import { getEvents } from './getEventss';
+import { getEvents } from './getEvents';
 import { useAsync } from 'react-use';
 
 function App() {
   useAsync(async () => {
     const events = await getEvents();
-    console.log(events);
   }, []);
   return (
     <div className='App'>
       <header className='App-header'>
-        <p> .   losdaskdoasdjosad
+        <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
         <a
